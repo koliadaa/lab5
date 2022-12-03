@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>3 Column Layout</title>
+    <link rel="stylesheet" href="assets/css/layout.css" />
+    <link rel="stylesheet" href="./assets/css/style.css" />
+
+    <script>
+      window.onload = function () {
+        // ви можете зробити скільки завгодно слайдів
+        let slides = [
+          {
+            title: "Click to open Wikipedia",
+            background: "./assets/img/slider-1.jpg",
+            link: "https://wikipedia.org",
+          },
+          {
+            title: "Click to open Moodle",
+            background: "./assets/img/slider-2.jpg",
+            link: "https://moodle.com",
+          },
+          {
+            title: "Click to open Gmail",
+            background: "./assets/img/slider-3.jpg",
+            link: "http://gmail.com",
+          },
+        ];
+        Slider.initSlider(slides);
+      };
+    </script>
+  </head>
+  <body>
+    <header class="header">
+      <img src="./assets/img/logo.png" width="48" alt="logo" />
+      <p>Header...</p>
+    </header>
+    <div class="container">
+      <main class="center column">
+        <article>
+          <h1>Slider</h1>
+
+          <div class="slider" id="slider"></div>
+          <ul class="slider-list">
+            <li class="slider-item">
+              <button class="slider-btn slider-left" type="button">Prev</button>
+            </li>
+            <li class="slider-item">
+              <button class="slider-btn slider-right" type="button">
+                Next
+              </button>
+            </li>
+            <li class="slider-item">
+              <button class="slider-btn slider-toggle" type="button">
+                Toggle visibility
+              </button>
+            </li>
+            <li class="slider-item">
+              <button class="slider-btn slide-show" type="button">
+                Slideshow
+              </button>
+            </li>
+          </ul>
+        </article>
+      </main>
+      <nav class="left column">
+        <h3>Left heading</h3>
+        <ul>
+          <li><a href="./index.html">Home</a></li>
+          <li><a href="./contact.html">Contact</a></li>
+          <li><a href="./about.html">About</a></li>
+          <li><a href="./slider.html">Slider</a></li>
+          <li><a href="./media.html">Media</a></li>
+          <li><a href="./table.html">Table</a></li>
+        </ul>
+      </nav>
+      <div class="right column">
+        <h3>Right heading</h3>
+        <p></p>
+      </div>
+      <div class="push"></div>
+    </div>
+    <div class="footer-wrapper">
+      <footer class="footer">
+        <img src="./assets/img/logo.png" width="48" alt="logo" />
+        <p>Footer...</p>
+      </footer>
+    </div>
+    <script src="./assets/js/script.js"></script>
+  </body>
+</html>

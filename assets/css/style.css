@@ -1,0 +1,172 @@
+img {
+  display: block;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+.header {
+  display: flex;
+}
+
+.footer {
+  display: flex;
+}
+
+.visually-hidden {
+  position: absolute;
+
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+} /* about */
+
+.section .about__1 {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 24px;
+}
+
+.section .about__2 {
+  font-family: "Montserrat", sans-serif;
+  font-size: 28px;
+}
+
+.section .about__3 {
+  font-family: "Times New Roman", Times, serif;
+  font-style: italic;
+  font-size: 32px;
+}
+
+/* slider */
+
+#slider {
+  position: relative;
+
+  color: #ffffff;
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+  height: 60vh;
+}
+
+a.link {
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  display: block;
+  width: 100%;
+  height: 100vh;
+  background: transparent;
+  color: transparent;
+  text-decoration: none;
+}
+
+.singleSlide {
+  background-size: cover;
+  height: 75vh;
+  position: absolute;
+  left: 100%;
+  width: 100%;
+  top: 0;
+}
+/* стилі для анімації нижче */
+
+@-webkit-keyframes slideIn {
+  100% {
+    left: 0;
+  }
+}
+
+@keyframes slideIn {
+  100% {
+    left: 0;
+  }
+}
+
+.slideInRight {
+  left: -100%;
+  -webkit-animation: slideIn 1s forwards;
+  animation: slideIn 1s forwards;
+}
+
+.slideInLeft {
+  left: 100%;
+  -webkit-animation: slideIn 1s forwards;
+  animation: slideIn 1s forwards;
+}
+
+@-webkit-keyframes slideOutLeft {
+  100% {
+    left: -100%;
+  }
+}
+
+@keyframes slideOutLeft {
+  100% {
+    left: -100%;
+  }
+}
+
+.slideOutLeft {
+  -webkit-animation: slideOutLeft 1s forwards;
+  animation: slideOutLeft 1s forwards;
+}
+
+@-webkit-keyframes slideOutRight {
+  100% {
+    left: 100%;
+  }
+}
+
+@keyframes slideOutRight {
+  100% {
+    left: 100%;
+  }
+}
+
+.slideOutRight {
+  -webkit-animation: slideOutRight 1s forwards;
+  animation: slideOutRight 1s forwards;
+}
+
+/* my slider */
+
+.slider-list {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+}
+
+/* .slider-item {
+} */
+
+.slider-btn {
+  min-width: 100px;
+  height: 35px;
+
+  transition: transform 250ms ease-in-out;
+
+  background: linear-gradient(
+    90deg,
+    rgb(255, 141, 141) 0%,
+    rgb(255, 217, 164) 100%
+  );
+  border: none;
+  border-radius: 4px;
+}
+
+.slider-btn:hover,
+.slider-btn:focus {
+  transform: scale(1.1);
+}
